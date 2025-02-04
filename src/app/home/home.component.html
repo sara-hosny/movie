@@ -1,0 +1,20 @@
+<div class="container">
+    <h1 class="text-center mt-5 mb-5">Trending Movies</h1>
+<div class="row gy-3 ">
+ @for (item of movies; track $index) {
+    <div class="col-lg-4 col-md-6 col-sm-12 mt-3">
+        <div class="card h-100">
+            <div class="card-img">
+                <img [src]="imgUrl+item.poster_path" class="w-100">
+            </div>
+            <div class="card-body">
+                <h4 class="text-danger">{{item.title}}</h4>
+                <h6 class="text-black">{{item.original_language}}</h6>
+                <p class="text-secondary">{{item.overview}}</p>
+                <a href="" class="text-light">{{item.backdrop_path}}</a>
+            </div>
+           </div>
+        </div> 
+ }
+</div>
+</div>
